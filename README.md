@@ -42,3 +42,7 @@ override.tf.json - все файлы с именем override.tf.json
 .terraformrc - все файлы .terraformrc
 terraform.rc - все файлы terraform.rc
 ```
+
+
+FIX line some bug
+
