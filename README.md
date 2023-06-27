@@ -46,3 +46,5 @@ terraform.rc - все файлы terraform.rc
 
 FIX line some bug
 
+Test GUI GIT
+
