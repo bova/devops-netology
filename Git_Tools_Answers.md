@@ -4,6 +4,7 @@
 
 
 Хэш: aefead2207ef7e2aa5dc81a34aedf0cad4c32545
+
 Сообщение:    Update CHANGELOG.md
 
 2. Ответьте на вопросы.
