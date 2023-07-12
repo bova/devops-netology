@@ -2,6 +2,8 @@
 
 ## Задача 1
 
+**Создайте собственный образ любой операционной системы (например ubuntu-20.04) с помощью Packer (инструкция).**
+
 ![YC Ubuntu image](./home_work/virt_04/task1/Screenshot_1.png)
 
 
@@ -9,9 +11,13 @@
 
 * 2.1
 
+**Создайте вашу первую виртуальную машину в YandexCloud с помощью web-интерфейса YandexCloud.**
+
 ![ВМ task2-virt1](./home_work/virt_04/task2/Screenshot_1.png)
 
 * 2.2
+
+**Создайте вашу первую виртуальную машину в YandexCloud с помощью Terraform (вместо использования веб-интерфейса YandexCloud). Используйте Terraform-код в директории (src/terraform).**
 
 ![ВМ node01](./home_work/virt_04/task2/Screenshot_2.png)
 
@@ -139,14 +145,23 @@ internal_ip_address_node01_yandex_cloud = "192.168.101.32"
 
 ## Задача 3
 
+**С помощью Ansible и Docker Compose разверните на виртуальной машине из предыдущего задания систему мониторинга на основе Prometheus/Grafana. Используйте Ansible-код в директории (src/ansible).**
+
 ![docker ps](./home_work/virt_04/task3/Screenshot_1.png)
 
 ## Задача 4
+
+1. Откройте веб-браузер, зайдите на страницу http://<внешний_ip_адрес_вашей_ВМ>:3000.
+2. Используйте для авторизации логин и пароль из .env-file.
+3. Изучите доступный интерфейс, найдите в интерфейсе автоматически созданные docker-compose-панели с графиками(dashboards).
+4. Подождите 5-10 минут, чтобы система мониторинга успела накопить данные.
 
 ![Grafana GUI](./home_work/virt_04/task4/Screenshot_1.png)
 
 
 ## Задача 5
+
+**Создайте вторую ВМ и подключите её к мониторингу, развёрнутому на первом сервере.**
 
 ![Grafana GUI](./home_work/virt_04/task5/Screenshot_1.png)
 ![YC VM info](./home_work/virt_04/task5/Screenshot_2.png)
