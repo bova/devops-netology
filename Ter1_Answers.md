@@ -64,7 +64,7 @@ ${random_password.random_string_FAKE.resulT} -> ${random_password.random_string.
 
 ![ter1-task1-6](./home_work/ter_01/task1/Screenshot_2.png)
 
-7. Уничтожьте созданные ресурсы с помощью terraform. Убедитесь, что все ресурсы удалены. Приложите содержимое файла terraform.tfstate.
+7. **Уничтожьте созданные ресурсы с помощью terraform. Убедитесь, что все ресурсы удалены. Приложите содержимое файла terraform.tfstate.**
 
 Содержимое файла terraform.tfstate
 
