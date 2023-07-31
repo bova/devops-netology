@@ -1,6 +1,6 @@
 # Домашнее задание к занятию «Основы Terraform. Yandex Cloud»
 
-[Ссылка на исходный код main.tf](./home_work/ter_02/src/main.tf)
+[Ссылка на исходный код main.tf](./home_work/ter_02/src/main.tf#L10)
 
 ## Задание 1
 
@@ -84,7 +84,6 @@ variable "vm_web_instance_cf" {
 
 * Решение
 
-
 * *vms_platform.tf*
 
 ```
@@ -165,6 +164,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 * Решение
 
+* Ссылка на исходный код: [outputs.tf](./home_work/ter_02/src/outputs.tf)
+
 ```
 output "external_ips" {
    value = {
@@ -191,6 +192,8 @@ external_ips = {
 
 * Решение
 
+* Ссылка на исходный код:  [locals.tf](./home_work/ter_02/src/locals.tf)
+
 ```
 locals {
   vm_web_name = "${var.project}-${var.env}-${var.vm_prefix}-web"
@@ -211,6 +214,8 @@ locals {
 4. Проверьте terraform plan. Изменений быть не должно.
 
 * Решение 1
+
+* Ссылка на исходный код:  [vms_platform.tf](./home_work/ter_02/src/vms_platform.tf#L22)
 
 ```
 variable "vm_resources" {
@@ -234,6 +239,8 @@ variable "vm_resources" {
 > No changes. Your infrastructure matches the configuration.
 
 * Решение 2
+
+* Ссылка на исходный код:  [vms_platform.tf](./home_work/ter_02/src/vms_platform.tf#L40)
 
 ```
 variable "vm_metadata" {
