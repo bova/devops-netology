@@ -38,7 +38,7 @@ core_fraction=5 - минимально возможный процент про�
 
 * Решение
 
-```
+```terraform
 variable "vm_web_image_family" {
   type = string
   default = "ubuntu-2004-lts"
@@ -86,7 +86,7 @@ variable "vm_web_instance_cf" {
 
 * *vms_platform.tf*
 
-```
+```terraform
 ###vm db
 variable "vm_db_image_family" {
   type = string
@@ -120,7 +120,7 @@ variable "vm_db_instance_cf" {
 ```
 
 * *main.tf*
-```
+```terraform
 ### DB
 resource "yandex_compute_instance" "platform_db" {
   name        = var.vm_db_instance_name
@@ -166,7 +166,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 * Ссылка на исходный код: [outputs.tf](./home_work/ter_02/src/outputs.tf)
 
-```
+```terraform
 output "external_ips" {
    value = {
   (yandex_compute_instance.platform.name) = yandex_compute_instance.platform.network_interface[0].ip_address
@@ -194,7 +194,7 @@ external_ips = {
 
 * Ссылка на исходный код:  [locals.tf](./home_work/ter_02/src/locals.tf)
 
-```
+```terraform
 locals {
   vm_web_name = "${var.project}-${var.env}-${var.vm_prefix}-web"
   vm_db_name = "${var.project}-${var.env}-${var.vm_prefix}-db"
@@ -215,9 +215,9 @@ locals {
 
 * Решение 1
 
-* Ссылка на исходный код:  [vms_platform.tf](./home_work/ter_02/src/vms_platform.tf#L22)
+* Ссылка на исходный код:  [vms_platform.tf](./home_work/ter_02/src/vms_platform.tf#L22-L38)
 
-```
+```terraform
 variable "vm_resources" {
   default = {
     "web" = {
@@ -240,9 +240,9 @@ variable "vm_resources" {
 
 * Решение 2
 
-* Ссылка на исходный код:  [vms_platform.tf](./home_work/ter_02/src/vms_platform.tf#L40)
+* Ссылка на исходный код:  [vms_platform.tf](./home_work/ter_02/src/vms_platform.tf#L40-L46)
 
-```
+```terraform
 variable "vm_metadata" {
  default = {
    "serial_port_enable" = 1
