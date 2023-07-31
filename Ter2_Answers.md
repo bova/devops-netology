@@ -1,6 +1,6 @@
 # Домашнее задание к занятию «Основы Terraform. Yandex Cloud»
 
-[Ссылка на исходный код main.tf](./home_work/ter_02/src/main.tf#L10)
+*Ссылка на исходный код:* [main.tf](./home_work/ter_02/src/main.tf#L10)
 
 ## Задание 1
 
@@ -164,7 +164,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 * Решение
 
-* Ссылка на исходный код: [outputs.tf](./home_work/ter_02/src/outputs.tf)
+*Ссылка на исходный код:* [outputs.tf](./home_work/ter_02/src/outputs.tf)
 
 ```terraform
 output "external_ips" {
@@ -192,7 +192,7 @@ external_ips = {
 
 * Решение
 
-* Ссылка на исходный код:  [locals.tf](./home_work/ter_02/src/locals.tf)
+*Ссылка на исходный код:*  [locals.tf](./home_work/ter_02/src/locals.tf)
 
 ```terraform
 locals {
@@ -215,7 +215,7 @@ locals {
 
 * Решение 1
 
-* Ссылка на исходный код:  [vms_platform.tf](./home_work/ter_02/src/vms_platform.tf#L22-L38)
+*Ссылка на исходный код:*  [vms_platform.tf](./home_work/ter_02/src/vms_platform.tf#L22-L38)
 
 ```terraform
 variable "vm_resources" {
@@ -240,7 +240,7 @@ variable "vm_resources" {
 
 * Решение 2
 
-* Ссылка на исходный код:  [vms_platform.tf](./home_work/ter_02/src/vms_platform.tf#L40-L46)
+*Ссылка на исходный код:*  [vms_platform.tf](./home_work/ter_02/src/vms_platform.tf#L40-L46)
 
 ```terraform
 variable "vm_metadata" {
