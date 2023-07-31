@@ -39,3 +39,4 @@ variable "vms_ssh_root_key" {
   default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPuvNrGnTW6RQfprRUDtvAStmDAwwu4al/7VpnMpZCko root@v-povetkin-hp"
   description = "ssh-keygen -t ed25519"
 }
+
