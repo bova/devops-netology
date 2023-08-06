@@ -68,3 +68,5 @@
 * **Результат**
 
 ![ter3-task4-1](./home_work/ter_03/task4/Screenshot_1.png)
+
+
