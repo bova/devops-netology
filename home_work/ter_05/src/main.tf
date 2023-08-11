@@ -11,7 +11,7 @@ module "vpc_dev" {
 # VPovetkin
 
 module "test-vm" {
-  source          = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  source          = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=1.0.0"
   env_name        = "develop"
   network_id      = module.vpc_dev.network_id
   subnet_zones    = ["ru-central1-a"]
@@ -19,7 +19,8 @@ module "test-vm" {
   instance_name   = "web"
   instance_count  = 1
   image_family    = "ubuntu-2004-lts"
-  public_ip       = true
+  public_ip       = false
+  security_group_ids = ["enp2r5l69ma92cn8dt5u"]
 
   metadata = {
       user-data          = data.template_file.cloudinit.rendered #Для демонстрации №3
