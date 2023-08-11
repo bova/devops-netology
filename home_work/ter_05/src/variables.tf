@@ -53,7 +53,24 @@ variable "vm_db_name" {
   description = "example vm_db_ prefix"
 }
 
-## VPovetkin
+## VPovetkin Validation
 
+variable "my_ip" {
+  type = string
+  default = "1920.1680.0.1"
+  validation {
+    condition = can(cidrhost("${var.my_ip}/32", 0))
+    error_message = "Invalid IP address."
+  }
+}
+
+variable "my_ip_list" {
+  type = list(string)
+  default = ["192.168.0.1", "1.1.1.1", "1270.0.0.1"]
+  validation {
+    condition = alltrue([for ip in var.my_ip_list: can(cidrhost("${ip}/32", 0)) ])
+    error_message = "Invalid IP address."
+  }
+}
 
 

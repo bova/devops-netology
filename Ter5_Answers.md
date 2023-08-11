@@ -54,7 +54,7 @@ Check: CKV_YC_11: "Ensure security group is assigned to network interface."
 ![ter5-task2-4](./home_work/ter_05/task2/Screenshot_4.png)
 
 
-# Задание 3
+## Задание 3
 
 1. Сделайте в GitHub из ветки 'terraform-05' новую ветку 'terraform-hotfix'.
 2. Проверье код с помощью tflint и checkov, исправьте все предупреждения и ошибки в 'terraform-hotfix', сделайте коммит.
@@ -62,6 +62,15 @@ Check: CKV_YC_11: "Ensure security group is assigned to network interface."
 4. Вставьте в комментарий PR результат анализа tflint и checkov, план изменений инфраструктуры из вывода команды terraform plan.
 5. Пришлите ссылку на PR для ревью. Вливать код в 'terraform-05' не нужно.
 
+![PR Request](https://github.com/bova/devops-netology/pull/1)
 
+## Задание 4
 
+1. Напишите переменные с валидацией и протестируйте их, заполнив default верными и неверными значениями. Предоставьте скриншоты проверок из terraform console.
+
+type=string, description="ip-адрес" — проверка, что значение переменной содержит верный IP-адрес с помощью функций cidrhost() или regex(). Тесты: "192.168.0.1" и "1920.1680.0.1";
+type=list(string), description="список ip-адресов" — проверка, что все адреса верны. Тесты: ["192.168.0.1", "1.1.1.1", "127.0.0.1"] и ["192.168.0.1", "1.1.1.1", "1270.0.0.1"].
+
+![ter5-task2-7](./home_work/ter_05/task2/Screenshot_7.png)
+![ter5-task2-8](./home_work/ter_05/task2/Screenshot_8.png)
 
