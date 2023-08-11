@@ -62,7 +62,7 @@ Check: CKV_YC_11: "Ensure security group is assigned to network interface."
 4. Вставьте в комментарий PR результат анализа tflint и checkov, план изменений инфраструктуры из вывода команды terraform plan.
 5. Пришлите ссылку на PR для ревью. Вливать код в 'terraform-05' не нужно.
 
-![PR Request](https://github.com/bova/devops-netology/pull/1)
+**Решение**: [PR Request](https://github.com/bova/devops-netology/pull/1)
 
 ## Задание 4
 
