@@ -15,6 +15,7 @@ ok: [localhost] => {
 }
 ```
 
+
 2. Найдите файл с переменными (group_vars), в котором задаётся найденное в первом пункте значение, и поменяйте его на all default fact.
 
 * group_vars/all/examp.yml
@@ -23,6 +24,7 @@ ok: [localhost] => {
 ---
   some_fact: "all default fact"
 ```
+
 
 3. Воспользуйтесь подготовленным (используется docker) или создайте собственное окружение для проведения дальнейших испытаний.
 
@@ -42,8 +44,9 @@ docker run -dit --name ubuntu pycontribs/ubuntu:latest sleep 6000000
 
 5. Добавьте факты в group_vars каждой из групп хостов так, чтобы для some_fact получились значения: для deb — deb default fact, для el — el default fact.
 
-[Ссылка на исходный код group_vars/deb](./home_work/mnt_01/group_vars/deb/examp.yml)
-[Ссылка на исходный код group_vars/el](./home_work/mnt_01/group_vars/el/examp.yml)
+* [Ссылка на исходный код group_vars/deb](./home_work/mnt_01/group_vars/deb/examp.yml)
+
+* [Ссылка на исходный код group_vars/el](./home_work/mnt_01/group_vars/el/examp.yml)
 
 6. Повторите запуск playbook на окружении prod.yml. Убедитесь, что выдаются корректные значения для всех хостов.
 
