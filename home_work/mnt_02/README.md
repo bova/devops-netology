@@ -24,5 +24,5 @@
 
 ### Переменные
 
-vector_version: "0.32.1"
-clickhouse_version: "22.3.3.44"
+* vector_version: "0.32.1"
+* clickhouse_version: "22.3.3.44"
