@@ -10,7 +10,7 @@
 2. При создании tasks рекомендую использовать модули: get_url, template, yum, apt.
 3. Tasks должны: скачать статику LightHouse, установить Nginx или любой другой веб-сервер, настроить его конфиг для открытия LightHouse, запустить веб-сервер.
 
-*Решение*: [Ссылка на site.yml](./home_work/mnt_03/site.yml#L68-98)
+*Решение*: [Ссылка на site.yml](./home_work/mnt_03/site.yml#L68-L98)
 
 4. Подготовьте свой inventory-файл prod.yml.
 
