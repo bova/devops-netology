@@ -1,8 +1,7 @@
 # Домашнее задание к занятию 3 «Использование Ansible»
 
-[Ссылка на исходный код ansible](./home_work/mnt_02/)
+[Ссылка на исходный код ansible](./home_work/mnt_03/)
 
-[Ссылка на vector.toml.j2](./home_work/mnt_02/templates/vector.toml.j2)
 
 ## Основная часть
 
