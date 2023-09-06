@@ -47,3 +47,13 @@
 10. Выложите playbook в репозиторий.
 
 11. В ответе дайте ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
+
+*Роли*
+
+* [vector-role](https://github.com/bova/vector-role.git)
+
+* [lighthouse-role](https://github.com/bova/lighthouse-role.git)
+
+*Playbook*
+
+* [Playbook](./home_work/mnt_04/site.yml)
