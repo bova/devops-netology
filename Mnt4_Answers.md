@@ -56,4 +56,4 @@
 
 *Playbook*
 
-* [Playbook](./home_work/mnt_04/site.yml)
+* [Playbook](./home_work/mnt_04/)
