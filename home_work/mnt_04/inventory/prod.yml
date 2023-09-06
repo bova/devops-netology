@@ -1,0 +1,19 @@
+---
+clickhouse:
+  hosts:
+    clickhouse1:
+      ansible_host: 158.160.75.214
+      ansible_ssh_user: admin
+      ansible_become: true
+vector:
+  hosts:
+    vector1:
+      ansible_host: 158.160.72.179
+      ansible_ssh_user: admin
+      ansible_become: true
+lighthouse:
+  hosts:
+    lighthouse1:
+      ansible_host: 158.160.77.251
+      ansible_ssh_user: admin
+      ansible_become: true
