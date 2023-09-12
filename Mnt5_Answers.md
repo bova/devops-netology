@@ -1,29 +1,24 @@
 # Домашнее задание к занятию 5 «Тестирование roles»
 
-Подготовка к выполнению
-Установите molecule: pip3 install "molecule==3.5.2" и драйвера pip3 install molecule_docker molecule_podman.
-Выполните docker pull aragast/netology:latest — это образ с podman, tox и несколькими пайтонами (3.7 и 3.9) внутри.
 
-
-## Основная часть
-Ваша цель — настроить тестирование ваших ролей.
-
-Задача — сделать сценарии тестирования для vector.
-
-Ожидаемый результат — все сценарии успешно проходят тестирование ролей.
-
-### Molecule
+## Molecule
 
 1. Запустите molecule test -s centos_7 внутри корневой директории clickhouse-role, посмотрите на вывод команды. Данная команда может отработать с ошибками, это нормально. Наша цель - посмотреть как другие в реальном мире используют молекулу.
+
+* **Выполнено**
+
 2. Перейдите в каталог с ролью vector-role и создайте сценарий тестирования по умолчанию при помощи molecule init scenario --driver-name docker.
 
-molecule init scenario --driver-name docker
+
+> molecule init scenario --driver-name docker
+
 
 3. Добавьте несколько разных дистрибутивов (centos:8, ubuntu:latest) для инстансов и протестируйте роль, исправьте найденные ошибки, если они есть.
 
 > molecule test
 
 *Результат*: ![mnt5-task3-1](./home_work/mnt_05/screenshots/Screenshot_3.png)
+
 
 4. Добавьте несколько assert в verify.yml-файл для проверки работоспособности vector-role (проверка, что конфиг валидный, проверка успешности запуска и др.).
 
@@ -53,6 +48,7 @@ molecule init scenario --driver-name docker
 
 > docker run --name centos7 -it pycontribs/centos:7 /bin/bash
 
+
 *Результат теста*: ![mnt5-task5-1](./home_work/mnt_05/screenshots/Screenshot_5.gif)
 
 
@@ -72,22 +68,28 @@ molecule init scenario --driver-name docker
 
 > tox
 
+* Получил ошибку: 
+
+```
+CRITICAL 'molecule/compatibility/molecule.yml' glob failed.  Exiting.
+ERROR: InvocationError for command /opt/vector-role/.tox/py37-ansible30/bin/molecule test -s compatibility --destroy always (exited with code 1)
+```
+
 *Результат*: ![mnt5-task3-tox](./home_work/mnt_05/screenshots/Screenshot_tox_3.png)
 
 4. Создайте облегчённый сценарий для molecule с драйвером molecule_podman. Проверьте его на исполнимость.
 
--
+*не выполнено*
 
 5. Пропишите правильную команду в tox.ini, чтобы запускался облегчённый сценарий.
 
--
+*не выполнено*
 
 6. Запустите команду tox. Убедитесь, что всё отработало успешно.
 
--
+*не выполнено*
 
 7. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
 
--
+*не выполнено*
 
-После выполнения у вас должно получится два сценария molecule и один tox.ini файл в репозитории. Не забудьте указать в ответе теги решений Tox и Molecule заданий. В качестве решения пришлите ссылку на ваш репозиторий и скриншоты этапов выполнения задания.
