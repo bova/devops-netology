@@ -48,6 +48,7 @@
 Шаг 6. Проверьте через playbook на идемпотентность.
 
 >  ansible-playbook site.yml
+>
 >  ansible-playbook site.yml
 
 *Результат*: ![mnt6-task6-1](./home_work/mnt_06/screenshots/Screenshot_6.png)
@@ -57,6 +58,7 @@
 Шаг 8. Инициализируйте новую collection: ansible-galaxy collection init my_own_namespace.yandex_cloud_elk.
 
 > cd /root/mnt_hw/
+>
 > ansible-galaxy collection init my_own_namespace.yandex_cloud_elk
 
 Шаг 9. В эту collection перенесите свой module в соответствующую директорию.
@@ -66,7 +68,9 @@
 Шаг 10. Single task playbook преобразуйте в single task role и перенесите в collection. У role должны быть default всех параметров module.
 
 > cd /root/mnt_hw/my_own_namespace/yandex_cloud_elk
+>
 > ansible-galaxy role init my_own_module --init-path roles/
+>
 > molecule init scenario
 
 * Defaults/main.yml
@@ -97,12 +101,15 @@ content: "File content"
 Шаг 13. Создайте .tar.gz этой collection: ansible-galaxy collection build в корневой директории collection.
 
 > cd ~/mnt_hw/my_own_namespace/yandex_cloud_elk
+>
 > ansible-galaxy collection build
 
 Шаг 14. Создайте ещё одну директорию любого наименования, перенесите туда single task playbook и архив c collection.
 
 > mkdir ~/mnt_hw/test_my_collection
+>
 > cd ~/test_my_collection/
+>
 > cp ~/mnt_hw/my_own_namespace/yandex_cloud_elk/my_own_namespace-yandex_cloud_elk-1.0.0.tar.gz ~/mnt_hw/test_my_collection/
 
 * Playbook: site.yml
@@ -118,6 +125,7 @@ content: "File content"
 Шаг 15. Установите collection из локального архива: ansible-galaxy collection install <archivename>.tar.gz.
 
 > cd ~/mnt_hw/test_my_collection/
+>
 > ansible-galaxy collection install my_own_namespace-yandex_cloud_elk-1.0.0.tar.gz --force
 
 *Результат*: ![mnt6-task15-1](./home_work/mnt_06/screenshots/Screenshot_15.png)
