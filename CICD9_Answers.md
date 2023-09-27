@@ -14,7 +14,7 @@
 ### Основная часть
 
 
-**Результат загрузки в репозиторий maven-public**: [cicd9-task2-1](./home_work/cicd_09/files/maven-metadata.xml)
+**Результат загрузки в репозиторий maven-public**: [maven-metadata.xml](./home_work/cicd_09/files/maven-metadata.xml)
 
 
 ## Знакомство с Maven
@@ -22,4 +22,4 @@
 ### Основная часть
 
 
-**POM.XML**: [cicd9-task3-1](./home_work/cicd_09/files/pom.xml)
+**Исправленный pom.xml**: [pom.xml](./home_work/cicd_09/files/pom.xml)
