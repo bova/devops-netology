@@ -1,6 +1,6 @@
 # Домашнее задание к занятию 10 «Jenkins»
 
-1. *Сделать Freestyle Job, который будет запускать molecule test из любого вашего репозитория с ролью.*
+## 1. *Сделать Freestyle Job, который будет запускать molecule test из любого вашего репозитория с ролью.*
 
 **Подготовка на агенте**
 
@@ -18,7 +18,7 @@ docker run -dit --name centos7 pycontribs/centos:7 sleep 6000000
 
 
 
-2. *Сделать Declarative Pipeline Job, который будет запускать molecule test из любого вашего репозитория с ролью.*
+## 2. *Сделать Declarative Pipeline Job, который будет запускать molecule test из любого вашего репозитория с ролью.*
 
 **Pipeline script**
 
@@ -47,15 +47,18 @@ pipeline {
 ![cicd10-task2-1](./home_work/cicd_10/screenshots/Screenshot_3.png)
 
 
-3. *Перенести Declarative Pipeline в репозиторий в файл Jenkinsfile.*
+## 3. *Перенести Declarative Pipeline в репозиторий в файл Jenkinsfile.*
 
 **Исходный код Jenkinsfile**: [Jenkinsfile](./home_work/cicd_10/task3/Jenkinsfile)
 
 
-4. *Создать Multibranch Pipeline на запуск Jenkinsfile из репозитория.*
+## 4. *Создать Multibranch Pipeline на запуск Jenkinsfile из репозитория.*
 
+**Результат обнаружения и сборки**
 
-6. *Внести необходимые изменения, чтобы Pipeline запускал ansible-playbook без флагов --check --diff, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами --check --diff.*
+![cicd10-task4-1](./home_work/cicd_10/screenshots/Screenshot_4.png)
+
+## 6. *Внести необходимые изменения, чтобы Pipeline запускал ansible-playbook без флагов --check --diff, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами --check --diff.*
 
 ```Groovy
 node("linux"){
@@ -81,7 +84,7 @@ node("linux"){
 ```
 
 
-7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл ScriptedJenkinsfile.
+## 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл ScriptedJenkinsfile.
 
 **Исходный код ScriptedJenkinsfile**: [ScriptedJenkinsfile](./home_work/cicd_10/task7/ScriptedJenkinsfile)
 
