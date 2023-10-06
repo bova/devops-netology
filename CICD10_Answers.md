@@ -45,3 +45,46 @@ pipeline {
 **Результат сборки**
 
 ![cicd10-task2-1](./home_work/cicd_10/screenshots/Screenshot_3.png)
+
+
+3. *Перенести Declarative Pipeline в репозиторий в файл Jenkinsfile.*
+
+**Исходный код Jenkinsfile**: [Jenkinsfile](./home_work/cicd_10/task3/Jenkinsfile)
+
+
+4. *Создать Multibranch Pipeline на запуск Jenkinsfile из репозитория.*
+
+
+6. *Внести необходимые изменения, чтобы Pipeline запускал ansible-playbook без флагов --check --diff, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами --check --diff.*
+
+```Groovy
+node("linux"){
+    stage("Git checkout my") {
+        git branch: 'master', credentialsId: '8707a55d-eb8a-485a-9cd4-47a0038ef384', url: 'git@github.com:aragastmatb/example-playbook.git'
+    }
+    stage("Sample define secret_check"){
+        secret_check=true
+    }
+    stage("Defind prod_run"){
+        prod_run = true
+    }
+    stage("Run playbook"){
+        if (prod_run){
+            sh 'ansible-playbook site.yml -i inventory/prod.yml'
+        }
+        else{ 
+            sh 'ansible-playbook site.yml -i inventory/prod.yml --check --diff'
+        }
+        
+    }
+}
+```
+
+
+7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл ScriptedJenkinsfile.
+
+**Исходный код ScriptedJenkinsfile**: [ScriptedJenkinsfile](./home_work/cicd_10/task7/ScriptedJenkinsfile)
+
+**Результат сборки**
+
+![cicd10-task7-1](./home_work/cicd_10/screenshots/Screenshot_7.png)
