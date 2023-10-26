@@ -1,0 +1,106 @@
+[0KRunning with gitlab-runner 16.5.0 (853330f9)[0;m
+[0K  on gitlab-runner.ru-central1.internal exeJRn5M, system ID: s_991dc05ba052[0;m
+section_start:1698321815:prepare_executor[0K[0K[36;1mPreparing the "shell" executor[0;m[0;m
+[0KUsing Shell (bash) executor...[0;m
+section_end:1698321815:prepare_executor[0Ksection_start:1698321815:prepare_script[0K[0K[36;1mPreparing environment[0;m[0;m
+Running on gitlab-runner.ru-central1.internal...
+section_end:1698321815:prepare_script[0Ksection_start:1698321815:get_sources[0K[0K[36;1mGetting source from Git repository[0;m[0;m
+[32;1mFetching changes with git depth set to 20...[0;m
+Reinitialized existing Git repository in /home/gitlab-runner/builds/exeJRn5M/0/vpovetkin/helloworld/.git/
+[32;1mChecking out fa450c2c as detached HEAD (ref is main)...[0;m
+[32;1mSkipping Git submodules setup[0;m
+section_end:1698321816:get_sources[0Ksection_start:1698321816:step_script[0K[0K[36;1mExecuting "step_script" stage of the job script[0;m[0;m
+[32;1m$ docker info[0;m
+Containers: 0
+ Running: 0
+ Paused: 0
+ Stopped: 0
+Images: 36
+Server Version: 1.13.1
+Storage Driver: overlay2
+ Backing Filesystem: xfs
+ Supports d_type: true
+ Native Overlay Diff: true
+Logging Driver: journald
+Cgroup Driver: systemd
+Plugins: 
+ Volume: local
+ Network: bridge host macvlan null overlay
+Swarm: inactive
+Runtimes: docker-runc runc
+Default Runtime: docker-runc
+Init Binary: /usr/libexec/docker/docker-init-current
+containerd version:  (expected: aa8187dbd3b7ad67d8e5e3a15115d3eef43a7ed1)
+runc version: 8891bca22c049cd2dcf13ba2438c0bac8d7f3343 (expected: 9df8b306d01f59d3a8029be411de015b7304dd8f)
+init version: fec3683b971d9c3ef73f284f176672c44b448662 (expected: 949e6facb77383876aeff8a6944dde66b3089574)
+Security Options:
+ seccomp
+  WARNING: You're not using the default seccomp profile
+  Profile: /etc/docker/seccomp.json
+ selinux
+Kernel Version: 3.10.0-1160.99.1.el7.x86_64
+Operating System: CentOS Linux 7 (Core)
+OSType: linux
+Architecture: x86_64
+Number of Docker Hooks: 3
+CPUs: 2
+Total Memory: 1.794 GiB
+Name: gitlab-runner.ru-central1.internal
+ID: BOZ5:KN6Y:5YTM:Q3VO:AUGW:R3Y2:RMG5:UKCZ:NPVH:3MQX:A44R:BWUD
+Docker Root Dir: /var/lib/docker
+Debug Mode (client): false
+Debug Mode (server): false
+Registry: https://index.docker.io/v1/
+Experimental: false
+Insecure Registries:
+ 127.0.0.0/8
+Live Restore Enabled: false
+Registries: docker.io (secure)
+[32;1m$ docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY[0;m
+Login Succeeded
+[32;1m$ docker build -t $IMAGE_TAG .[0;m
+Sending build context to Docker daemon   151 kB
+Step 1/8 : FROM centos:7
+ ---> eeb6ee3f44bd
+Step 2/8 : WORKDIR /python_api
+ ---> Using cache
+ ---> a706f31d81b0
+Step 3/8 : COPY requirements.txt /python_api
+ ---> Using cache
+ ---> 2ecb9dbf1255
+Step 4/8 : RUN yum install -y     python3.7     python3-pip
+ ---> Using cache
+ ---> a2fc79a6acd3
+Step 5/8 : RUN pip3 install -r requirements.txt
+ ---> Using cache
+ ---> 4452d18cb5ac
+Step 6/8 : COPY . /python_api
+ ---> c2104285e3ab
+Removing intermediate container 9fb2be31c46c
+Step 7/8 : ENTRYPOINT python3
+ ---> Running in 6d4491671465
+ ---> bd12d1424334
+Removing intermediate container 6d4491671465
+Step 8/8 : CMD python-api.py
+ ---> Running in 9d151070eaa7
+ ---> 498c70aec4b2
+Removing intermediate container 9d151070eaa7
+Successfully built 498c70aec4b2
+[32;1m$ docker push $IMAGE_TAG[0;m
+The push refers to a repository [vpovetkin.gitlab.yandexcloud.net:5050/vpovetkin/helloworld/hello]
+a0b3384dcf0f: Preparing
+fac129185617: Preparing
+efc9381d3b7b: Preparing
+8e51c54edb63: Preparing
+6b9778b36b20: Preparing
+174f56854903: Preparing
+174f56854903: Waiting
+efc9381d3b7b: Layer already exists
+fac129185617: Layer already exists
+8e51c54edb63: Layer already exists
+6b9778b36b20: Layer already exists
+174f56854903: Layer already exists
+a0b3384dcf0f: Pushed
+gitlab-fa450c2c: digest: sha256:e7f76d066e417adac8fee29d11c8373f6fef87c6579b2af6d324fe0ab65c776c size: 1575
+section_end:1698321817:step_script[0Ksection_start:1698321817:cleanup_file_variables[0K[0K[36;1mCleaning up project directory and file based variables[0;m[0;m
+section_end:1698321817:cleanup_file_variables[0K[32;1mJob succeeded[0;m
