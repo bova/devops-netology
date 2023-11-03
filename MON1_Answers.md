@@ -23,6 +23,71 @@
 >
 > SLI = (summ_2xx_requests + summ_3xx_requests) / (summ_all_requests)
 
+5. Опишите основные плюсы и минусы pull и push систем мониторинга.
+
+**PUSH, плюсы**
+
+* Возможность отправки метрик в две и более системы мониторинга (Репликация)
+* Обычно используется протокол UDP, меньше накладных расходов
+* Лучше подходит для статической инфраструктуры
+
+**PUSH, минусы**
+
+* Сложнее настройка и отладка
+
+**PULL, плюсы**
+
+* Легче получать и отлаживать данные
+* Лучше подходит для динамической инфраструктуры
+* Централизованная конфигурация
+
+**PULL, минусы**
+
+* Не подходит для "мало-живущих" процессов (Short Lifecycle: JOB, Task ...)
+* Тяжелее масштабировать
+
+6. Какие из ниже перечисленных систем относятся к push модели, а какие к pull? А может есть гибридные?
+
+* Prometheus - **pull**
+* TICK - **push**
+* Zabbix - **pull и push**
+* VictoriaMetrics - **pull и push**
+* Nagios - **push**
+
+
+7. Склонируйте себе репозиторий и запустите TICK-стэк, используя технологии docker и docker-compose.
+
+**Установка**
+
+```
+cd /tick
+curl -SL https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+git clone https://github.com/influxdata/sandbox.git
+cd sandbox
+./sandbox up
+```
+
+**TICK UI**
+
+![mon01-task7-1](./home_work/mon_01/screenshots/Screenshot_7.png)
+
+
+8.Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
+
+Нажмите на кнопку Add a query
+Изучите вывод интерфейса и выберите БД telegraf.autogen
+В measurments выберите cpu->host->telegraf-getting-started, а в fields выберите usage_system. Внизу появится график утилизации cpu.
+Вверху вы можете увидеть запрос, аналогичный SQL-синтаксису. Поэкспериментируйте с запросом, попробуйте изменить группировку и интервал наблюдений.
+Для выполнения задания приведите скриншот с отображением метрик утилизации cpu из веб-интерфейса.
+
+
+9. Изучите список telegraf inputs. Добавьте в конфигурацию telegraf следующий плагин - docker:
+
+
+**Docker метрики**
+
+![mon01-task9-1](./home_work/mon_01/screenshots/Screenshot_9.png)
+
 
 ## Дополнительное задание* (со звёздочкой)
 
