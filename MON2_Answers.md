@@ -20,8 +20,6 @@ docker-compose up
 ![mon02-task1-1](./home_work/mon_02/screenshots/Screenshot_1.png)
 
 
-100 * (1 - avg(rate(node_cpu_seconds_total{mode="idle"}[$__rate_interval])))
-
 
 ### Задание 2
 
