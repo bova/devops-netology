@@ -29,7 +29,6 @@ chown -f -R $USER ~/.kube
 
 microk8s status
 
-	
 microk8s kubectl get nodes
 microk8s config
 
