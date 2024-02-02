@@ -36,6 +36,16 @@ microk8s enable dashboard
 microk8s enable rbac
 
 microk8s kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address='0.0.0.0'
+
+Public IP case
+
+vi /var/snap/microk8s/current/certs/csr.conf.template
+
+# [ alt_names ]
+# Add
+# IP.4 = 123.45.67.89
+
+microk8s refresh-certs --cert front-proxy-client.crt
 ```
 
 * Create token
