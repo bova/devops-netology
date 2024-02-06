@@ -13,7 +13,7 @@
 
 > vi nginx-mt-deployment.yaml
 
-```
+```YAML
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -50,7 +50,7 @@ spec:
 
 > vi nginx-mt-svc.yaml
 
-```
+```YAML
 apiVersion: v1
 kind: Service
 metadata:
@@ -108,7 +108,7 @@ spec:
 
 > vi nginx-deployment.yaml
 
-```
+```YAML
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -141,7 +141,7 @@ spec:
 
 > vi nginx-svc.yaml
 
-```
+```YAML
 apiVersion: v1
 kind: Service
 metadata:
