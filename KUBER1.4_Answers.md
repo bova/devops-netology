@@ -14,7 +14,7 @@
 
 vi nginx-mt-dep.yaml
 
-```
+```YAML
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -112,12 +112,12 @@ spec:
       protocol: TCP
       port: 9001
       targetPort: 80
-	  nodePort: 30001
+      nodePort: 30001
     - name: mt
       protocol: TCP
       port: 9002
       targetPort: 8080
-	  nodePort: 30002
+      nodePort: 30002
 ```
 
 > kubectl apply -f nginx-np-svc.yaml
