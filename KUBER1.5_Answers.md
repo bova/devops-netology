@@ -10,7 +10,7 @@
 
 **Решение**
 
-vi backend-dep.yaml
+> vi backend-dep.yaml
 
 ```YAML
 apiVersion: apps/v1
@@ -36,7 +36,7 @@ spec:
         - containerPort: 80
 ```
 
-vi frontend-dep.yaml
+> vi frontend-dep.yaml
 
 ```YAML
 apiVersion: apps/v1
@@ -62,8 +62,9 @@ spec:
         - containerPort: 80
 ```
 
-kubectl apply -f backend-dep.yaml
-kubectl apply -f frontend-dep.yaml
+> kubectl apply -f backend-dep.yaml
+
+> kubectl apply -f frontend-dep.yaml
 
 
 > vi backend-svc.yaml
@@ -101,6 +102,7 @@ spec:
 ```
 
 > kubectl apply -f backend-svc.yaml
+
 > kubectl apply -f frontend-svc.yaml
 
 Запуск пода для тестирования
@@ -131,7 +133,7 @@ spec:
 
 > microk8s enable ingress
 
-vi ingress.yaml
+> vi ingress.yaml
 
 ```YAML
 apiVersion: networking.k8s.io/v1
