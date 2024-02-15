@@ -112,6 +112,11 @@ spec:
           path: /var/log
 ```
 
+Подключение к контейнеру MultiTool
+
+> kubectl exec log-dep-wmcf6 -c mt -it bash
+
+
 **Результат:**
 
 *ls -lh /log/; tail -f /log/messages* (MultiTool)
