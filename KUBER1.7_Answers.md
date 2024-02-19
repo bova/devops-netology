@@ -102,19 +102,20 @@ spec:
 ![kuber1.7-task1-1](./home_work/kuber_1.6/screenshots/Screenshot_1.png)
 
 *kubectl delete -f pvc-dep.yaml*
+
 *kubectl delete -f pvc.yaml*
 
-![kuber1.7-task1-2](./home_work/kuber_1.6/screenshots/Screenshot_2.png)
+![kuber1.7-task1-2](./home_work/kuber_1.7/screenshots/Screenshot_2.png)
 
 Данные доступны, так как существует PV
 
-![kuber1.7-task1-2](./home_work/kuber_1.6/screenshots/Screenshot_3.png)
+![kuber1.7-task1-2](./home_work/kuber_1.7/screenshots/Screenshot_3.png)
 
 *kubectl delete -f pv.yaml*
 
 Данные доступны, так как политика переиспользования ресурсов по умолчанию - Retain
 
-![kuber1.7-task1-2](./home_work/kuber_1.6/screenshots/Screenshot_4.png)
+![kuber1.7-task1-2](./home_work/kuber_1.7/screenshots/Screenshot_4.png)
 
 
 ## Задание 2
@@ -192,9 +193,9 @@ spec:
 
 *dd ... /vol3/1.file; ls -lh ...* (MultiTool)
 
-![kuber1.7-task2-1](./home_work/kuber_1.6/screenshots/Screenshot_5.png)
+![kuber1.7-task2-1](./home_work/kuber_1.7/screenshots/Screenshot_5.png)
 
 
 *pvc, pv, pod*
 
-![kuber1.7-task2-2](./home_work/kuber_1.6/screenshots/Screenshot_6.png)
+![kuber1.7-task2-2](./home_work/kuber_1.7/screenshots/Screenshot_6.png)
