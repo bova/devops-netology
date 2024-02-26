@@ -99,7 +99,7 @@ spec:
 
 *tail -f /vol2/io.txt* (MultiTool)
 
-![kuber1.7-task1-1](./home_work/kuber_1.6/screenshots/Screenshot_1.png)
+![kuber1.7-task1-1](./home_work/kuber_1.7/screenshots/Screenshot_1.png)
 
 *kubectl delete -f pvc-dep.yaml*
 
