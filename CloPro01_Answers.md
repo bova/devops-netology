@@ -161,7 +161,7 @@ resource "yandex_compute_instance" "priv-instance" {
 ```
 
 
-[Ссылка на исходный код terraform:](./home_work/clopro_01/src))
+[Ссылка на исходный код terraform:](./home_work/clopro_01/src)
 
 
 **Результат**
