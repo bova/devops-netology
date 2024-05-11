@@ -1,2 +1,4 @@
 .idea
 personal.auto.tfvars
+*.tfstate
+*.tfstate.backup
