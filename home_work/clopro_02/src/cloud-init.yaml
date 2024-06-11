@@ -1,0 +1,25 @@
+#cloud-config
+
+write_files:
+- content: |
+    <html>
+    <body>
+    <p><?php echo "hostname is:".gethostname(); ?></p>
+    <p>
+    <img src="https://vpovetkin-20240610.website.yandexcloud.net/devcat.jpg" alt="DevOps cat" width="500" height="600">
+    </p>
+    </body>    
+    </html>
+  path: /var/www/html/index.html
+  defer: true
+- content: |
+    <html>
+    <body>
+    <p><?php echo "hostname is:".gethostname(); ?></p>
+    <p>
+    <img src="https://vpovetkin-20240610.website.yandexcloud.net/devcat.jpg" alt="DevOps cat" width="500" height="600">
+    </p>
+    </body>    
+    </html>
+  path: /var/www/html/index.php
+  defer: true
